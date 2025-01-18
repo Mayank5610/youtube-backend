@@ -28,4 +28,10 @@ app.use(express.static("pubic"));
 
 app.use(cookieParser());
 
+// ROUTES IMPORT
+const { userRouter } = require("./routes/user.routes");
+
+// ROUTES DECLARACTION
+app.use("/api/v1/users", userRouter); // http://localhost:8000/api/v1/users/register
+
 module.exports = { app };
